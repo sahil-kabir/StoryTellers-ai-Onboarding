@@ -13,7 +13,7 @@ flowchart LR
         BA["BetterAuth"]
     end
 
-    subgraph Database
+    subgraph Database ["Database (Neon Serverless)"]
         AuthDB[("Postgres<br/>Auth DB")]
         TasksDB[("Postgres<br/>Tasks DB")]
     end
