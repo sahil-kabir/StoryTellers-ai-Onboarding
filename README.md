@@ -13,9 +13,9 @@ flowchart LR
         BA["BetterAuth"]
     end
 
-    subgraph Database ["Database (Neon Serverless)"]
-        AuthDB[("Postgres<br/>Auth DB")]
-        TasksDB[("Postgres<br/>Tasks DB")]
+    subgraph Database ["Database (Neon)"]
+        AuthDB[("Auth DB")]
+        TasksDB[("Tasks DB")]
     end
 
     User -->|HTTP| RR
@@ -26,3 +26,9 @@ flowchart LR
 
     CFW -->|CRUD Tasks| TasksDB
 ```
+
+### Notes
+
+- The Neon Postgres database is accessed via **HTTP/REST** using Neon’s serverless driver, which is compatible with the Cloudflare Workers runtime (no TCP connections).
+- Authentication is handled by **BetterAuth**, with session validation enforced inside React Router **loaders and actions**.
+- The application is deployed entirely on **Cloudflare Workers**, avoiding a separate backend service.
