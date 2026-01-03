@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "todo-router",
+  "compatibility_date": "2025-12-27",
+  "main": "./workers/app.ts",
+  "observability": {
+    "logs": {
+      "enabled": true,
+    }
+  },
+  "compatibility_flags": [
+    "nodejs_compat",
+  ],
+  "vars": {
+    "VALUE_FROM_CLOUDFLARE": "Hello from Cloudflare",
+    "BETTER_AUTH_URL":"http://localhost:4173",
+    "BETTER_AUTH_SECRET":"c2rE4nIccDKMatKJrfMj5FAZPIc7ccgc"
+  }
+}
