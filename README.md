@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-    User[User Browser]
+    User[User]
 
     subgraph Frontend
         RR["React Router App<br/>(UI + Forms)"]
